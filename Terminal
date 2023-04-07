@@ -1,0 +1,105 @@
+5d855a1 (HEAD -> master) delete 4
+950438a delete 5
+d709448 delete 6
+d716556 (origin/master) commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+abdf53d Commit2
+71abc6d Create test2
+db46859 Commit1
+572f32f Initial
+fatal: you must specify path(s) to restore
+5d855a1 (HEAD -> master) delete 4
+d709448 delete 6
+d716556 (origin/master) commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+71abc6d Create test2
+db46859 Commit1
+572f32f Initial
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git reset --soft 5d855a1
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git restore
+fatal: you must specify path(s) to restore
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git restore 5d855a1
+error: pathspec '5d855a1' did not match any file(s) known to git
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git status
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 762 bytes | 762.00 KiB/s, done.
+Total 9 (delta 3), reused 4 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/AndreiLenshmidt/GitHW.git
+   d716556..5d855a1  master -> master
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git status
+On branch master
+nothing to commit, working tree clean
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git log --oneline       
+5d855a1 (HEAD -> master, origin/master) delete 4
+950438a delete 5
+d709448 delete 6
+d716556 commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+abdf53d Commit2
+db46859 Commit1
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git reset --soft 950438a
+d709448 delete 6
+d716556 commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+abdf53d Commit2
+71abc6d Create test2
+db46859 Commit1
+572f32f Initial
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git restore
+fatal: you must specify path(s) to restore
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git restore 5d855a1
+error: pathspec '5d855a1' did not match any file(s) known to git
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git restore D:\Прогучение\GitHW\GitHW2\GitHW1\test2
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git log --oneline
+950438a (HEAD -> master) delete 5
+d709448 delete 6
+d716556 commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+abdf53d Commit2
+71abc6d Create test2
+db46859 Commit1
+572f32f Initial
+PS D:\Прогучение\GitHW\GitHW2\GitHW1>
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git reset --mixed d709448
+M       test1.md
+M       test2
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git log --oneline        
+d709448 (HEAD -> master) delete 6
+d716556 commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+abdf53d Commit2
+71abc6d Create test2
+db46859 Commit1
+572f32f Initial
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git reset --hard d716556 
+HEAD is now at d716556 commit6
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> git log --oneline       
+d716556 (HEAD -> master) commit6
+6bd9403 commit5
+ec7e5f2 commit4
+83c0bc1 Commit3
+abdf53d Commit2
+71abc6d Create test2
+db46859 Commit1
+572f32f Initial
+PS D:\Прогучение\GitHW\GitHW2\GitHW1> 
